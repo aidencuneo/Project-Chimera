@@ -1,11 +1,11 @@
 import re
 import string
 
-bad = 'brotherfucker cyka blyat pigfuckerss Jesus wept in shit Christ cracker Christ bike sweet Jesus shitss Christ bike dickhead horseshit turd cocksucker pigfucker nigra goddamn holy shit dyke bastard bitch bloody bollocks brotherfucker bugger bullshit child-fucker Christ bike Christ cracker cock cocksucker crap cunt cyka blyat damn damn it dick dickhead dyke fatherfucker frigger fuck goddamn godsdamn hell holy shit horseshit in shit Jesus Christ Jesus fuck Jesus H. Christ Jesus Harold Christ Jesus, Marynd Joseph Jesus wept kike motherfucker nigga nigra pigfucker piss prick pussy shit shitss shite sisterfucker slut sof whore sof bitch spastic sweet Jesus turd twat wanker'.lower().split()
+bad = open('profanity_wordlist.txt').read().lower().split('\n')
 
 
 def tok(text):
-    text = re.sub(rf'[{string.punctuation}]', '', text)
+    text = re.sub(f'[{string.punctuation}]', '', text)
     return text.split()
 
 
@@ -17,5 +17,5 @@ def is_bad(text):
     return False
 
 
-a = is_bad("I'm boat")
-print('word is ' + ('bad' if a else 'not bad'))
+result = is_bad(input('Enter text: '))
+print('Sentence is ' + ('bad' if result else 'not bad'))
