@@ -17,5 +17,9 @@ def is_bad(text):
     return False
 
 
-result = is_bad(input('Enter text: '))
-print('Sentence is ' + ('bad' if result else 'not bad'))
+# result = is_bad(input('Enter text: '))
+# print('Sentence is ' + ('bad' if result else 'not bad'))
+
+for text in open('chat.txt', errors='ignore').read().lower().split('\n'):
+    if not is_bad(text):
+        print('not bad:', text, end='\n\n')
