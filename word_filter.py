@@ -19,3 +19,4 @@ def is_bad(text):
 
 result = is_bad(input('Enter text: '))
 print('Sentence is ' + ('bad' if result else 'not bad'))
+print("hi");
