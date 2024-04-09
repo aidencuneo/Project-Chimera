@@ -23,3 +23,4 @@ def is_bad(text):
 for text in open('chat.txt', errors='ignore').read().lower().split('\n'):
     if not is_bad(text):
         print('not bad:', text, end='\n\n')
+# hi
