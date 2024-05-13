@@ -18,6 +18,9 @@ import tiktoken
 openai.api_key = ''
 
 
+
+
+
 def one_msg(msg, model='gpt-3.5-turbo'):
     return get_chat_response(
         [{'role': 'user', 'content': msg}],
